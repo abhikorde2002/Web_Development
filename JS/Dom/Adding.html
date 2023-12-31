@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="lang">
+        <li>Java</li>
+        <li>Node Js</li>
+    </ul>
+</body>
+
+<script> 
+   function name(language) {
+        const li=document.createElement('li')
+        li.innerHTML= `${language}`
+        document.querySelector('.lang').appendChild(li)
+   }
+   name("JS")
+   name("Spring ")
+   function fun(langu) {
+        // const li=document.createElement('li')
+        // li.appendChild(querySelector.createTextNode(langu))
+        // document.querySelector('.lang').appendChild(li)
+        const li = document.createElement('li'); 
+        li. appendChild (document.createTextNode (langu))
+document.querySelector('.lang').appendchild(li)
+   }
+    fun('React')
+//    fun('html')
+
+   const second= document.querySelector("li:nth-child(2)")
+   //second.innerHTML="JavaScript"
+   const newli=document.createElement('li')
+   newli.textContent="JavaScript"
+   second.replaceWith(newli)
+
+   //edit
+   const first= document.querySelector("li:first-child")
+   first.outerHTML='<li>JAVA</li>'
+
+   //remove
+  const last= document.querySelector('li:last-child')
+  last.remove() 
+
+ </script>
+</html>

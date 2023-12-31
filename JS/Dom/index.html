@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bg-back">
+        <h1 id="head" class="heading" name="hi">Dom Manipulation <span style="display: none;">Code and chai</span> </h1>
+        <h2 id="jack"> Hi am Abhishek</h2>
+        <h2 class="iam">Nice to meet you </h2>
+        <input type="text" t>
+        <ul>
+            <li>one</li>
+            <li>Two</li>
+
+        </ul>
+
+        <ul>
+            <li class="hi">One</li>
+            <li class="hi">two</li>
+            <li class="hi">three</li>
+        </ul>
+    </div>
+    <script> console.log(document.getElementById('head').getAttribute('class'))
+            // console.log(document.getElementById('head').setAttribute('class','first'))
+             const title= document.getElementById('head');
+             title.style.backgroundColor="aqua"
+             title.style.padding='15px'
+             title.style.textAlign="center"
+             title.style.borderRadius='15px'
+             title.textContent //'Dom Manipulation '
+             console.log(document.querySelector('h1'));
+             console.log(document.querySelector('#jack'));
+             console.log(document.querySelector('.iam'));
+             console.log(document.querySelector('input[type="text"]'));
+             const s=document.querySelector('ul');
+             console.log(s);
+             const t=s.querySelector('li')
+             console.log(t.style.color='aqua');
+             
+
+             const arr= document.querySelectorAll('li')
+             console.log(arr);
+             //Cannot set properties of undefined  (setting 'color')
+             //console.log(a.style.color='blue');
+             console.log(arr[0].style.color='blue');
+
+
+            //  const a=[ 1,2,3,4,5]
+            //  console.log(a.forEach( (name)=>
+            //  name.style.backgroundColor='aqua',
+            //   ));
+
+            //  console.log(a.forEach( (name)=> 
+            //  name.style.padding='10px' ));
+             
+            //  console.log(a.forEach( (name)=> 
+            //  name.style.textAlign='center' ));
+
+            //  console.log(a.forEach( (name)=> 
+            //  name.style.borderRadius='10px' ));
+            const a=document.querySelectorAll('li')
+            console.log(a.forEach( (name)=>
+             name.style.backgroundColor='aqua',
+              ));
+
+             console.log(a.forEach( (name)=> 
+             name.style.padding='10px' ));
+             
+             console.log(a.forEach( (name)=> 
+             name.style.textAlign='center' ));
+
+             console.log(a.forEach( (name)=> 
+             name.style.borderRadius='10px' ));
+             
+             //We cant use forEach on Html collection so we need to conver this from Html collection to NodeList
+             console.log(document.getElementsByClassName('hi'));
+             const h=document.getElementsByClassName('hi')
+             //h.forEach((name)=> console.log(name))
+
+             console.log(Array.from(h));
+             const arrs=Array.from(h)
+             console.log(arrs.forEach( (name)=> console.log(name.style.color='red')));
+
+</script>
+</body>
+</html>
+
+<!-- 
+title.textContent
+out- 'Dom Manipulation Code and chai '
+title.innerText
+out- 'Dom Manipulation'
+title.innerHTML
+out- 'Dom Manipulation <span style="display: none;">Code and chai</span> ' -->

@@ -18,18 +18,19 @@ const userDetaile={
 //     let user="Abhi"
 //     console.log(user.this);
 // }
-// const chai=()=>{
+// const chai= ()=>{
 //     let user="Abhi"
-//     console.log(this);
+//     console.log(user);
 // }
+//  console.log(chai());
 
-// const chai=(num1,num2)=>{
-//     return  num1+num2
-// }
+const chai=(num1,num2)=>{
+    return  num1+num2
+}
 // const chai=(num1,num2)=>num1+num2
 
 //const chai=(num1,num2)=>(num1+num2)
       
-const chai=(num1,num2)=>({user:"Abhi"})
-console.log(chai());
+// const chai=(num1,num2)=>({user:"Abhi"})
+ console.log(chai(2,3));
 
